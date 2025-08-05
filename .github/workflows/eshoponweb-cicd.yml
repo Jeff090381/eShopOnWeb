@@ -97,8 +97,8 @@ jobs:
     #    package: .net-app/app.zip
 
     # Publish website to Azure App Service using CLI (WebApp)
-    #- name: Publish Website to WebApp
-    #  uses: Azure/cli@v2
-    #  with:
-    #    inlineScript: |
-    #         az webapp deploy --debug --name ${{ env.WEBAPP-NAME }} --resource-group ${{ env.RESOURCE-GROUP }} --src-path .net-app/app.zip --type zip
+    - name: Publish Website to WebApp
+      uses: Azure/cli@v2
+      with:
+        inlineScript: |
+             az webapp deploy --debug --name ${{ env.WEBAPP-NAME }} --resource-group ${{ env.RESOURCE-GROUP }} --src-path .net-app/app.zip --type zip
